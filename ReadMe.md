@@ -35,7 +35,7 @@ Below is an explanation of how the various JavaScript Concepts were incorporated
   - `Invalid Action:`
       - If the user selects an action that is not one of the valid actions ('deposit', 'withdraw', 'checkBalance'), the code throws an error with the error message, `Invalid action.`
   - `Amount Validation:`
-      - When depositing or withdrawing funds, the code checks if the provided amount is greater than zero and a valid number. If not, it throws an error with the error messages:
+      - When depositing or withdrawing funds, the code checks if the provided amount is greater than zero and a valid number. If not, it throws an error with one of the following error messages:
         - `Amount must be greater than zero.`
         - `Please enter a valid amount to deposit.`
         - `Please enter a valid withdrawal amount.`
