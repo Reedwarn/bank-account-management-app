@@ -27,7 +27,7 @@ Below is an explanation of how the various JavaScript Concepts were incorporated
     A switch statement is employed to determine which action the user wants to perform (`deposit`, `withdraw`, or `checkBalance`). Depending on the selected action, it calls the corresponding method of the currentAccount object (an instance of the `BankAccount` class) and updates the `resultMessage` element with the outcome of the action or any error messages.
 
 - **Try-Catch-Finally Statements:**
-    The website uses try-catch blocks to handle errors gracefully. When a user inputs invalid data or attempts to withdraw more funds than available, the catch block captures the error and displays an informative an error message in the `resultMessage` element. The finally block ensures that necessary cleanup actions are performed regardless of the outcome.
+    The website uses try-catch blocks to handle errors gracefully. When a user inputs invalid data or attempts to withdraw more funds than available, the catch block captures the error and displays an informative error message in the `resultMessage` element. Below is the breakdown of how each type of error is caught and handled.
   - `Empty Account Name or Account Number:`
         - If the user does not provide an account name or account number, the code throws an error with the error message, `Account name and number are necessary to continue, kindly fill them in.`
   - `Account Not Found:`
@@ -46,7 +46,7 @@ Below is an explanation of how the various JavaScript Concepts were incorporated
 
   - In all cases, when an error is caught in the catch block, an error message is set in the resultMessage element to inform the user about the issue. This ensures that users receive clear feedback when something goes wrong.
 
-  - The finally block does not contain any specific error handling logic in this code. It's typically used for code that should run regardless of whether an exception was thrown or not. In this case, you could use it for cleanup tasks or to reset some variables or UI elements if needed.
+  - The finally block does not contain any specific error-handling logic in this code. It's typically used for code that should run regardless of whether an exception was thrown or not. In this case, you could use it for cleanup tasks or to reset some variables or UI elements if needed.
 
 
 ## **How to Use the Site**
@@ -59,8 +59,8 @@ Below is an explanation of how the various JavaScript Concepts were incorporated
 - **Perform Actions:**
 After setting up your account, you can proceed to perform the following actions:
     - `Deposit:` Enter the amount you want to deposit in the "Amount" field and select "Deposit" from the action dropdown. Click the "Perform Action" button to deposit funds into your account.
-    - `Withdraw:` Enter the amount you want to withdraw in the "Amount" field and select "Withdraw" from the action dropdown. Click the "Perform Action" button to withdraw funds from your account. Note that a new user will have to deposit first before they can withdraw, as depositing creates an account for them automatically. Non existing users will get an error with the message `Account name and number are necessary to continue, kindly fill them in.`
-    - `Check Balance:` Select "Check Balance" from the action dropdown and click the "Perform Action" button to view your current account balance. Note that a new user will have to deposit first before they can check balance, as depositing creates an account for them automatically. Non existing users will get an error with the message `Account name and number are necessary to continue, kindly fill them in.`
+    - `Withdraw:` Enter the amount you want to withdraw in the "Amount" field and select "Withdraw" from the action dropdown. Click the "Perform Action" button to withdraw funds from your account. Note that a new user will have to deposit first before they can withdraw, as depositing creates an account for them automatically. Nonexisting users will get an error with the message `Account name and number are necessary to continue, kindly fill them in.`
+    - `Check Balance:` Select "Check Balance" from the action dropdown and click the "Perform Action" button to view your current account balance. Note that new users will have to deposit first before they can check their balance, as depositing creates an account for them automatically. Nonexisting users will get an error with the message `Account name and number are necessary to continue, kindly fill them in.`
 
 - **Results and Error Handling:**
     - The website will display the result of each action or any error messages in the Result Message area.
